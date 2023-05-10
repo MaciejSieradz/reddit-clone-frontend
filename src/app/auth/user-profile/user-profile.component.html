@@ -1,0 +1,14 @@
+<div class="flex flex-col ml-12">
+  <div>
+    Welcome <b>{{name}}</b>. You have posted <b>{{postLength}}</b> times(s).
+    You can check your post and comment history below.
+  </div>
+
+  <div>
+    Your Posts:
+  </div>
+
+  <div *ngFor="let post of posts">
+    <app-post-tile [post]="post"></app-post-tile>
+  </div>
+</div>

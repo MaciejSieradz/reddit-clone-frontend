@@ -1,0 +1,11 @@
+<div>
+  <div>
+    <fa-icon class="hover:cursor-pointer" (click)="upvotePost()" [icon]="faArrowUp" [style.color]="post.upVote ? 'green':''"></fa-icon>
+  </div>
+  <div>
+    {{post.voteCount}}
+  </div>
+  <div>
+    <fa-icon class="hover:cursor-pointer" (click)="downvotePost()" [icon]="faArrowDown" [style.color]="post.downVote ? 'red':''"></fa-icon>
+  </div>
+</div>

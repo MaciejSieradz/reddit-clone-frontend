@@ -1,0 +1,24 @@
+<div class="flex flex-row border my-4 py-2 items-center rounded-md">
+  <app-vote-button [post]="post" class="px-4"></app-vote-button>
+  <div>
+    <div class="flex flex-row space-x-2 items-center my-4">
+      <h3 class="font-semibold">{{ post.subredditName }}</h3>
+      <h3 class="text-sm text-gray-500">.</h3>
+      <h3 class="text-sm text-gray-500">
+        Post by <a href="" class="text-blue-500">{{ post.userName }}</a>
+      </h3>
+      <h3 class="text-sm text-gray-500">.</h3>
+      <h3 class="text-sm text-gray-500">{{ post.duration }}</h3>
+    </div>
+    <hr />
+    <div class="flex flex-col my-4">
+      <h1 class="text-xl font-semibold">{{ post.postName }}</h1>
+      <h2 [innerHTML]="post.description"></h2>
+    </div>
+    <hr />
+    <div class="flex flex-row items-center space-x-4 my-4">
+      <a href="" class="text-gray-500">Comments({{ post.commentCount }})</a>
+      <button (click)="goToPost(post.id)" class="px-4 py-2 bg-blue-500 rounded-sm text-white font-semibold">READ POST</button>
+    </div>
+  </div>
+</div>

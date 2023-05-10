@@ -1,0 +1,35 @@
+<div class="flex justify-between items-center bg-gray-100 pb-4 mb-6">
+  <div class="mt-4 ml-4">
+    <a href="" routerLink="" class="text-blue-500 font-semibold text-xl">Reddit Clone Page</a>
+  </div>
+  <div class="flex space-x-4 mt-4 mr-4 justify-center items-center">
+    <div *ngIf="isLoggedIn">
+      <button type="" (click)="changeMenuState()">
+        <span class="font-semibol text-blue-500 mr-2">{{username}}</span>
+        <fa-icon [icon]="faUser"></fa-icon>
+      </button>
+
+      <div *ngIf="showmenu"
+        class="z-10 absolute right-8 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+          <li>
+            <button class="block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            (click)="goToUserProfile()">
+              Profile
+            </button>
+          </li>
+          <li>
+            <button class="block w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            (click)="logout()">
+              Sign out
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!isLoggedIn" class="flex flex-row space-x-4 mt-4 mr-4 justify-center items-center">
+    <a routerLink="/sign-up" class="px-4 py-2 rounded-md text-lg text-blue-500 border-blue-500 border">Sign Up</a>
+    <a routerLink="/login" class="bg-blue-500 px-4 py-2 rounded-md text-lg text-white">Login</a>
+  </div>
+</div>
