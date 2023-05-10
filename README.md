@@ -1,6 +1,9 @@
 # RedditApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.\
+
+This is a basic front-end application for testing a back-end Spring application. I used TailwindCSS for styling, and some external libraries from npm like `Toastr`.
+There aren't many functionalities, this project is just for a learning purposes.
 
 ## Development server
 
